@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
@@ -12,6 +13,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+
 
 import SkillCard from "./SkillCard";
 
