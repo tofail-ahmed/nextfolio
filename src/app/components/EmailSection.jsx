@@ -4,39 +4,45 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // const [emailSubmitted, setEmailSubmitted] = useState(false);
+
+  const handleEmail =  (e) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+    const serviceId = "service_xu7s5i3";
+    const templateId = "template_h03qxpi";
+    const publicKey = "BYF0INnMhvjtLtoAY";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
+    const templateParams = {
+      to_name: "Tofail from your Portfolio",
+      from_name: name,
+      from_email: email,
+      message: message,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
+    console.log(templateParams);
+    emailjs
+    .send(serviceId, templateId, templateParams, publicKey)
+    .then((response) => {
+     toast.success("Email sent successfully",{
+      duration:5000,
+      position:"top-right",
+     });
+     setName(" ")
+     setEmail(" ")
+     setMessage(" ")
+    })
+    .catch((error) => {
+      toast.error("Error occured", error);
+    });
   };
 
   return (
@@ -65,12 +71,9 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+        
+          
+          <form className="flex flex-col" onSubmit={handleEmail}>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -84,23 +87,27 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="use@gmail.com"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div className="mb-6">
               <label
-                htmlFor="subject"
+                htmlFor="name"
                 className="text-white block text-sm mb-2 font-medium"
               >
-                Subject
+                Name
               </label>
               <input
-                name="subject"
+                name="name"
                 type="text"
-                id="subject"
+                id="name"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e)=>setName(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -115,6 +122,8 @@ const EmailSection = () => {
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk about..."
+                value={message}
+                onChange={(e)=>setMessage(e.target.value)}
               />
             </div>
             <button
@@ -124,7 +133,7 @@ const EmailSection = () => {
               Send Message
             </button>
           </form>
-        )}
+       
       </div>
     </section>
   );

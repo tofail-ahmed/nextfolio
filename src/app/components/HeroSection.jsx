@@ -20,15 +20,15 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation
+            <TypeAnimation className="text-xl lg:text-[50px]"
               sequence={[
-                "Judy",
+                "Tofail",
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
+                "MERN Stack Web Developer",
                 1000,
-                "UI/UX Designer",
+                "Front End Web Developer",
                 1000,
               ]}
               wrapper="span"
@@ -63,7 +63,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-[#181818] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] relative border-2 border-secondary-500">
             <Image
               src={profileImg}
               alt="hero image"
