@@ -21,10 +21,17 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
+  {
+    title: "Skills",
+    path: "#skills",
+  },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleNav = () => {
+    setNavbarOpen(!navbarOpen);
+  };
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-50 bg-[#1212124f] backdrop-blur-lg bg-opacity-100">
@@ -33,7 +40,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          <Image className="w-[150px]" src={logo} alt="logo"/>
+          <Image className="w-[150px]" src={logo} alt="logo" />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -52,7 +59,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div onClick={handleNav} className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -62,7 +69,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <MenuOverlay  links={navLinks} handleNav={handleNav} /> : null}
     </nav>
   );
 };
