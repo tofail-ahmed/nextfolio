@@ -16,13 +16,16 @@ import { SiPostman } from "react-icons/si";
 
 
 import SkillCard from "./SkillCard";
+import Title from "./Title";
 
 const Skills = () => {
   return (
-    <div className="text-white" id="skills">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Skills
-      </h2>
+    <div>
+      <div className="text-white my-8" id="skills">
+      {/* <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <span className="text-primary-500" >&lt;</span>  My Skills <span className="text-primary-500" >/&gt;</span>
+      </h2> */}
+      <Title title={"My Skills"}/>
       <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2 grid-cols-1">
         <SkillCard
           title={"Git"}
@@ -101,6 +104,7 @@ const Skills = () => {
           icon={SiPostman}
         />
       </div>
+    </div>
     </div>
   );
 };
