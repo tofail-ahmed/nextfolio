@@ -20,7 +20,8 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation className="text-xl lg:text-[50px]"
+            <TypeAnimation
+              className="text-xl lg:text-[50px]"
               sequence={[
                 "Tofail",
                 1000,
@@ -57,13 +58,13 @@ const HeroSection = () => {
             </Link>
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-          <div className="rounded-full bg-[#181818] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] relative border-2 border-secondary-500">
+        <div className="col-span-4 place-self-center mt-4 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 1, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="rounded-full bg-[#181818] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] relative border-2 border-secondary-500"
+          >
             <Image
               src={profileImg}
               alt="hero image"
@@ -71,8 +72,8 @@ const HeroSection = () => {
               width={300}
               height={300}
             />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
