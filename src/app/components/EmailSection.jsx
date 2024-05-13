@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
-import Title from "./Title";
+import Header from "./Header";
 const EmailSection = () => {
 
 
@@ -47,7 +47,7 @@ const EmailSection = () => {
 
   return (
     <div className="my-8">
-      <Title title={"Contact"} />
+      <Header title={"Contact"} />
       <section
         id="contact"
         className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
