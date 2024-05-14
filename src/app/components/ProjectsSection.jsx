@@ -41,7 +41,7 @@ const ProjectsSection = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
          <ProjectSliderCard img={athletic}/>
         </Slider>
       </div>
-      <SwiperSlider/>
+      
     </div>
   );
 };
