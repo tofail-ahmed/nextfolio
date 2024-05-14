@@ -24,7 +24,7 @@ const ProjectSliderCard = ({ img }) => {
         <div className="p-2">
           <h1 className="text-2xl text-center">Title</h1>
           <h1 className="text-center">Decription</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 my-4">
             <TechStackCard tech={"React"} className="border-2 border-primary-500" />
             <TechStackCard tech={"NodeJs"} className="border-2 border-primary-500" />
             <TechStackCard tech={"Redux"} className="border-2 border-primary-500" />
@@ -34,10 +34,10 @@ const ProjectSliderCard = ({ img }) => {
           </div>
           <div className="flex justify-around items-center">
             <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white px-2 rounded-lg">
-            <FaCode />Code
+           <span className='flex items-center gap-1'> <FaCode />Code</span>
             </button>
             <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white px-2 rounded-lg">
-            <IoIosGlobe /> Demo
+            <span className='flex items-center gap-1'><IoIosGlobe /> Demo</span>
             </button>
           </div>
         </div>
