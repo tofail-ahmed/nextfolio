@@ -14,6 +14,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+// import "./Project.css"
 const projectsData = [
   {
     id: 1,
@@ -93,9 +94,10 @@ const ProjectsSection = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
+  
     responsive: [
       {
         breakpoint: 1024,
@@ -103,25 +105,27 @@ const ProjectsSection = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+       
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    
   };
 
   return (
@@ -168,35 +172,201 @@ const ProjectsSection = () => {
     //     ))}
     //   </ul>
     // </section>
-    <div className="slider-container">
-      <Slider {...settings}>
-        <div>
-        <Image src={fyto} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={kiddo} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={event} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={quisinne} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={event} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={campus} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={athletic} alt="fyto"/>
-        </div>
-        <div>
-        <Image src={quisinne} alt="fyto"/>
-        </div>
-      </Slider>
+    <div className="">
+    <Header title={"My Projects"}/>
+      <div className="slider-container  p-8 ">
+        <Slider {...settings}>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={fyto}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={event}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={campus}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={athletic}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={fyto}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={kiddo}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={quisinne}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div className="    text-primary-400 p-2">
+            <div className="border-2 border-secondary-400 rounded-md ">
+            <Image
+              className="w-full h-[300px] mx-auto"
+              src={event}
+              alt="fyto"
+            />
+            <div className="p-2">
+              <h1 className="text-2xl text-center">Title</h1>
+              <h1 className="text-center">Decription</h1>
+              <div className="grid grid-cols-2 gap-4">
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1> 
+                <h1 className="mx-auto">Tech Stack</h1>
+                <h1 className="mx-auto">Tech Stack</h1>
+              </div>
+              <div className="flex justify-around items-center">
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Code</button>
+              <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-2 rounded-lg">Demo</button>
+              </div>
+            </div>
+            </div>
+          </div>
+         
+         
+          
+          
+        </Slider>
+      </div>
     </div>
-
   );
 };
 
