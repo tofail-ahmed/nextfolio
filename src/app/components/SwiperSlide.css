@@ -41,7 +41,7 @@
     }
 
     .swiper-button-next, .swiper-button-prev{
-      /* color:rgb(234, 0, 255); */
+      color:rgb(234, 0, 255);
       display:none;
 
 

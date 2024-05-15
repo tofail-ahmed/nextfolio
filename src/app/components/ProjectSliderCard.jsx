@@ -7,7 +7,7 @@ import { IoIosGlobe } from "react-icons/io";
 import { FaCode } from "react-icons/fa";
 
 
-const ProjectSliderCard = ({title,img1,img2,img3,img4}) => {
+const ProjectSliderCard = ({title,img1,img2,img3,img4,techs}) => {
   
   return (
   
@@ -21,15 +21,16 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4}) => {
         <div className="p-2">
 
           <h1 className="text-2xl text-center">{title}</h1>
-          <h1 className="text-center">Description</h1>
+          {/* <h1 className="text-center">Description</h1> */}
 
           <div className="flex flex-wrap gap-4 my-4">
-            <TechStackCard tech={"React"} className="border-2 border-primary-500" />
-            <TechStackCard tech={"NodeJs"} className="border-2 border-primary-500" />
-            <TechStackCard tech={"Redux"} className="border-2 border-primary-500" />
-            <TechStackCard tech={"Javascript"} className="border-2 border-primary-500" />
-            <TechStackCard tech={"Tailwindcss"} className="border-2 border-primary-500" />
-            <TechStackCard tech={"daisyUI"} className="border-2 border-primary-500" />
+            {
+              techs&&techs.map((tech,index)=>(
+                <TechStackCard key={index} tech={tech} className="border-2 border-primary-500" />
+              ))
+            }
+            
+           
           </div>
           
           <div className="flex justify-around items-center">

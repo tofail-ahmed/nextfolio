@@ -50,66 +50,120 @@ import q4 from "../../../public/projects/quisinne/quisinne_recipe.jpg"
 
 const ProjectsSection = () => {
  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
-  
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-       
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-    
-  };
+   dots: true,
+   infinite: false,
+   speed: 500,
+   slidesToShow: 2,
+   slidesToScroll: 1,
+   initialSlide: 0,
 
-  return (
-    
-    <div className="" id="projects">
-    <Header title={"My Projects"}/>
-      <div className="slider-container  p-8 ">
-        <Slider {...settings}>
-      
-         <ProjectSliderCard title={"Event360"} img1={event1} img2={event2} img3={event3} img4={event4}  />
-         <ProjectSliderCard title={"Campus Guru"} img1={campus1} img2={campus2} img3={campus3} img4={campus4}  />
-         <ProjectSliderCard title={"Relief Aid"} img1={relief1} img2={relief2} img3={relief3} img4={relief4}  />
-         <ProjectSliderCard title={"Athletic Excel"} img1={ath1} img2={ath2} img3={ath3} img4={ath4}  />
-         <ProjectSliderCard title={"Fytobyte"} img1={fyto1} img2={fyto2} img3={fyto3} img4={fyto4}  />
-         <ProjectSliderCard title={"Kiddo Valley"} img1={kiddo1} img2={kiddo2} img3={kiddo3} img4={kiddo4}  />
-         <ProjectSliderCard title={"Quisinne de French"} img1={q1} img2={q2} img3={q3} img4={q4}  />
+   responsive: [
+     {
+       breakpoint: 1024,
+       settings: {
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         infinite: true,
+         dots: true,
+       },
+     },
+     {
+       breakpoint: 600,
+       settings: {
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         initialSlide: 1,
+       },
+     },
+     {
+       breakpoint: 480,
+       settings: {
+         slidesToShow: 1,
+         slidesToScroll: 1,
+       },
+     },
+   ],
+ };
+const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", "AOS"] 
+ // const projects = [
+ //   { title: "Event360", img1: event1, img2: event2, img3: event3, img4: event4 },
+ //   { title: "Campus Guru", img1: campus1, img2: campus2, img3: campus3, img4: campus4 },
+ //   { title: "Relief Aid", img1: relief1, img2: relief2, img3: relief3, img4: relief4 },
+ //   { title: "Athletic Excel", img1: ath1, img2: ath2, img3: ath3, img4: ath4 },
+ //   { title: "Fytobyte", img1: fyto1, img2: fyto2, img3: fyto3, img4: fyto4, techs: ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", "AOS"] },
+ //   { title: "Kiddo Valley", img1: kiddo1, img2: kiddo2, img3: kiddo3, img4: kiddo4 },
+ //   { title: "Quisinne de French", img1: q1, img2: q2, img3: q3, img4: q4 },
+ // ];
 
+ 
 
-        
-
-        </Slider>
-      </div>
-      
-    </div>
-  );
+ return (
+   <div className="" id="projects">
+     <Header title={"My Projects"} />
+     <div className="slider-container  p-8 ">
+       <Slider {...settings}>
+         <ProjectSliderCard
+           title={"Event360"}
+           img1={event1}
+           img2={event2}
+           img3={event3}
+           img4={event4}
+         />
+         <ProjectSliderCard
+           title={"Campus Guru"}
+           img1={campus1}
+           img2={campus2}
+           img3={campus3}
+           img4={campus4}
+         />
+         <ProjectSliderCard
+           title={"Relief Aid"}
+           img1={relief1}
+           img2={relief2}
+           img3={relief3}
+           img4={relief4}
+         />
+         <ProjectSliderCard
+           title={"Athletic Excel"}
+           img1={ath1}
+           img2={ath2}
+           img3={ath3}
+           img4={ath4}
+         />
+         <ProjectSliderCard
+           title={"Fytobyte"}
+           img1={fyto1}
+           img2={fyto2}
+           img3={fyto3}
+           img4={fyto4}
+          //  t1={"NextJs"}
+          //  t2={"Javscript"}
+          //  t3={"Redux"}
+          //  t4={"TailwindCSS"}
+          //  t5={"DaisyUI"}
+          //  t6={"ParticleJs"}
+          //  t7={"AOS"}
+          techs={fytoTechs}
+         />
+         <ProjectSliderCard
+           title={"Kiddo Valley"}
+           img1={kiddo1}
+           img2={kiddo2}
+           img3={kiddo3}
+           img4={kiddo4}
+           
+         />
+         <ProjectSliderCard
+           title={"Quisinne de French"}
+           img1={q1}
+           img2={q2}
+           img3={q3}
+           img4={q4}
+         />
+       </Slider>
+     </div>
+   </div>
+ );
 };
 
 export default ProjectsSection;
