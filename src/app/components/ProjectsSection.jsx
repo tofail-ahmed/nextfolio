@@ -84,7 +84,14 @@ const ProjectsSection = () => {
      },
    ],
  };
-const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", "AOS"] 
+const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", ] ;
+const eventTechs=['ReactJs','Typescript','TailwindCSS','Framer Motion',"AOS","SwiperJs",'Tanstack Query'];
+const reliefTechs=['ReactJs','Typescript','TailwindCSS','Framer Motion','AOS',"Slicker",'Redux']
+const quisinneTechs=['ReactJs','Javascript','TailwindCSS','DaisyUI','React-dom','AOS'];
+const campusTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','Firebase',"Paralax"];
+const kiddoTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','AOS','Firebase','Toastify'];
+const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form','Firebase',]
+
  // const projects = [
  //   { title: "Event360", img1: event1, img2: event2, img3: event3, img4: event4 },
  //   { title: "Campus Guru", img1: campus1, img2: campus2, img3: campus3, img4: campus4 },
@@ -108,6 +115,7 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={event2}
            img3={event3}
            img4={event4}
+           techs={eventTechs}
          />
          <ProjectSliderCard
            title={"Campus Guru"}
@@ -115,6 +123,7 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={campus2}
            img3={campus3}
            img4={campus4}
+           techs={campusTechs}
          />
          <ProjectSliderCard
            title={"Relief Aid"}
@@ -122,6 +131,7 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={relief2}
            img3={relief3}
            img4={relief4}
+           techs={reliefTechs}
          />
          <ProjectSliderCard
            title={"Athletic Excel"}
@@ -129,6 +139,7 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={ath2}
            img3={ath3}
            img4={ath4}
+           techs={athTechs}
          />
          <ProjectSliderCard
            title={"Fytobyte"}
@@ -136,13 +147,6 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={fyto2}
            img3={fyto3}
            img4={fyto4}
-          //  t1={"NextJs"}
-          //  t2={"Javscript"}
-          //  t3={"Redux"}
-          //  t4={"TailwindCSS"}
-          //  t5={"DaisyUI"}
-          //  t6={"ParticleJs"}
-          //  t7={"AOS"}
           techs={fytoTechs}
          />
          <ProjectSliderCard
@@ -151,6 +155,7 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={kiddo2}
            img3={kiddo3}
            img4={kiddo4}
+           techs={kiddoTechs}
            
          />
          <ProjectSliderCard
@@ -159,6 +164,7 @@ const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "Par
            img2={q2}
            img3={q3}
            img4={q4}
+           techs={quisinneTechs}
          />
        </Slider>
      </div>
