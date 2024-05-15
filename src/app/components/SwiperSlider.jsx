@@ -21,30 +21,25 @@ import fyto from "../../../public/images/projects/me/fyto_home.jpg";
 import kiddo from "../../../public/images/projects/me/kiddo_valley_home.jpg";
 import quisinne from "../../../public/images/projects/me/quisinne_home.jpg";
 import relief from "../../../public/images/projects/me/relief_home.jpg";
-const SwiperSlider = () => {
-  // const [showModal,setShowModal]=useState(false)
+const SwiperSlider = ({img1,img2,img3,img4}) => {
+  
   return (
     
       <div className="bg-red-300">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
-            <Image src={relief} alt="img" />
+            <Image src={img1} alt="img" />
+        </SwiperSlide>
+      <SwiperSlide>
+            <Image src={img2} alt="img" />
         </SwiperSlide>
         <SwiperSlide>
-            <Image src={event} alt="img" />
+            <Image src={img3} alt="img" />
         </SwiperSlide>
         <SwiperSlide>
-            <Image src={fyto} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image src={athletic} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image src={kiddo} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image src={campus} alt="img" />
-        </SwiperSlide>
+            <Image src={img4} alt="img" />
+        </SwiperSlide> 
+        
        
       </Swiper>
     </div>
