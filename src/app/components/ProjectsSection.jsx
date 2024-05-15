@@ -95,7 +95,7 @@ const ProjectsSection = () => {
 
   return (
     
-    <div className="">
+    <div className="" id="projects">
     <Header title={"My Projects"}/>
       <div className="slider-container  p-8 ">
         <Slider {...settings}>

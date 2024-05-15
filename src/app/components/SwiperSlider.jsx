@@ -27,15 +27,19 @@ const SwiperSlider = ({img1,img2,img3,img4}) => {
     
       <div className="bg-red-300">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper rounded-t-md">
+        
         <SwiperSlide>
             <Image  src={img1} alt="img" />
         </SwiperSlide>
+
       <SwiperSlide>
             <Image  src={img2} alt="img" />
         </SwiperSlide>
+
         <SwiperSlide>
             <Image  src={img3} alt="img" />
         </SwiperSlide>
+
         <SwiperSlide>
             <Image  src={img4} alt="img" />
         </SwiperSlide> 

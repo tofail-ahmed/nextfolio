@@ -29,8 +29,11 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const handleNav = () => {
-    setNavbarOpen(!navbarOpen);
+  const closeNav = () => {
+    setNavbarOpen(false);
+  };
+  const openNav = () => {
+    setNavbarOpen(true);
   };
 
   return (
@@ -59,7 +62,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div onClick={handleNav} className="menu hidden md:block md:w-auto" id="navbar">
+        <div onClick={closeNav} className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -69,7 +72,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay  links={navLinks} handleNav={handleNav} /> : null}
+      {navbarOpen ? <MenuOverlay  links={navLinks} closeNav={closeNav} /> : null}
     </nav>
   );
 };
