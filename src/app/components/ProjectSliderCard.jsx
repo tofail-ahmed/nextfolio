@@ -1,17 +1,11 @@
 import Image from 'next/image';
 import React,{useState} from 'react';
-import ProjectModal from "./ProjectModal"
+
 import TechStackCard from "./TechStackCard";
 import SwiperSlider from "./SwiperSlider";
 import { IoIosGlobe } from "react-icons/io";
 import { FaCode } from "react-icons/fa";
-import athletic from "../../../public/images/projects/me/athletic_excel-home.jpg";
-import campus from "../../../public/images/projects/me/campus_guru_home.jpg";
-import event from "../../../public/images/projects/me/event360_home.jpg";
-import fyto from "../../../public/images/projects/me/fyto_home.jpg";
-import kiddo from "../../../public/images/projects/me/kiddo_valley_home.jpg";
-import quisinne from "../../../public/images/projects/me/quisinne_home.jpg";
-import relief from "../../../public/images/projects/me/relief_home.jpg";
+
 
 const ProjectSliderCard = ({title,img1,img2,img3,img4}) => {
   

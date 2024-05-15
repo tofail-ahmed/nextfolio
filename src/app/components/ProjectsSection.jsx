@@ -1,22 +1,16 @@
 "use client";
 import React, { useState, useRef } from "react";
-// import ProjectCard from "./ProjectCard";
-// import ProjectTag from "./ProjectTag";
+
 import { motion, useInView } from "framer-motion";
 import Header from "./Header";
 import ProjectSliderCard from "./ProjectSliderCard";
-import athletic from "../../../public/images/projects/me/athletic_excel-home.jpg";
-import campus from "../../../public/images/projects/me/campus_guru_home.jpg";
-import event from "../../../public/images/projects/me/event360_home.jpg";
-import fyto from "../../../public/images/projects/me/fyto_home.jpg";
-import kiddo from "../../../public/images/projects/me/kiddo_valley_home.jpg";
-import quisinne from "../../../public/images/projects/me/quisinne_home.jpg";
-import relief from "../../../public/images/projects/me/relief_home.jpg";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import SwiperSlider from "./SwiperSlider";
+
 import event1 from "../../../public/projects/event/event_home.jpg"
 import event2 from "../../../public/projects/event/event_gallery.jpg"
 import event3 from "../../../public/projects/event/event_recentEvent.jpg"
@@ -79,7 +73,7 @@ const ProjectsSection = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {
