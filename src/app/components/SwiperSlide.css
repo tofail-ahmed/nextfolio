@@ -25,12 +25,15 @@
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
+      background: rgba(255, 0, 0, 0);
+     
+      
+      
     
       /* Center slide text vertically */
       display: flex;
       justify-content: center;
-      align-items: center;
+      /* align-items: center; */
     }
     
     .swiper-slide img {

@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const SwiperSlider = ({ img1, img2, img3, img4 }) => {
   return (
-    <div className="bg-red-300">
+    <div className="">
       <Swiper
         navigation={true}
         autoplay={{
