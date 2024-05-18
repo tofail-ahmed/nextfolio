@@ -18,12 +18,12 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs}) => {
         <SwiperSlider img1={img1} img2={img2} img3={img3} img4={img4} />
        
 
-        <div className="p-2">
+        <div className="p-2 ">
 
-          <h1 className="text-2xl text-center">{title}</h1>
+          <h1 className="text-xl lg:text-3xl text-center font-bold">{title}</h1>
           {/* <h1 className="text-center">Description</h1> */}
 
-          <div className="flex flex-wrap gap-4 my-4">
+          <div className="flex flex-wrap gap-4 my-2">
             {
               techs&&techs.map((tech,index)=>(
                 <TechStackCard key={index} tech={tech} className="border-2 border-primary-500" />

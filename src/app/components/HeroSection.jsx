@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import profileImg from "../../../public/images/profile_img.png" 
+
+
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -37,25 +39,23 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          {/* <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
-          </p> */}
+
           <div>
             <Link
-              href="/#contact"
+              href="https://drive.google.com/file/d/1joei7ft1iHNA98MRIxg84ez15-r-fNTA/view?usp=sharing"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
-              Hire Me
+              View Resume
             </Link>
-            <Link
-              href="/"
+            <a
+              
+              href="https://drive.google.com/uc?export=download&id=1joei7ft1iHNA98MRIxg84ez15-r-fNTA"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+                Download Resume
               </span>
-            </Link>
+            </a>
           </div>
         </motion.div>
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
