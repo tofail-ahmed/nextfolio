@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+
 import { FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
@@ -13,10 +14,18 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+import { SiShadcnui } from "react-icons/si";
+import { SiMui } from "react-icons/si";
+import { SiAntdesign } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
+import { SiDaisyui } from "react-icons/si";
+import { SiFramer } from "react-icons/si";
+
 
 
 import SkillCard from "./SkillCard";
 import Header from "./Header";
+import Image from "next/image";
 
 const Skills = () => {
   return (
@@ -103,8 +112,47 @@ const Skills = () => {
             className="text-[#FB923C]"
             icon={SiPostman}
           />
+          <SkillCard
+            title={"Shadcn"}
+            subtitle={"UI Library"}
+            className="text-[#fafafa]"
+            icon={SiShadcnui}
+          />
+          <SkillCard
+            title={"Antd"}
+            subtitle={"UI Framework"}
+            className="text-[#61d4e4]"
+            icon={SiAntdesign }
+          />
+          <SkillCard
+            title={"Material UI"}
+            subtitle={"UI Library"}
+            className="text-[#61d4e4]"
+            icon={SiMui  }
+          />
+          <SkillCard
+            title={"VS Code"}
+            subtitle={"Code Editor"}
+            className="text-[#4f8cdd]"
+            icon={TbBrandVscode   }
+          />
+          <SkillCard
+            title={"DasiyUi"}
+            subtitle={"UI Framework"}
+            className="text-[#f5b350]"
+            icon={SiDaisyui    }
+          />
+          <SkillCard
+            title={"Framer Motion"}
+            subtitle={"Animation Library"}
+            className="text-[#ffffff] "
+            icon={SiFramer  }
+          />
         </div>
       </div>
+      {/* <div>
+      <Image width={500} height={300}  src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tofail-ahmed&theme=discord_old_blurple" />
+      </div> */}
     </div>
   );
 };
