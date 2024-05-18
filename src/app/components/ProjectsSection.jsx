@@ -116,6 +116,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={event3}
            img4={event4}
            techs={eventTechs}
+           liveLink={"https://event360-client-iota.vercel.app/"}
+           codeLink={"https://github.com/tofail-ahmed/event-360-client"}
          />
          <ProjectSliderCard
            title={"Campus Guru"}
@@ -124,6 +126,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={campus3}
            img4={campus4}
            techs={campusTechs}
+           liveLink={"https://college-client-adeee.web.app/"}
+           codeLink={"https://github.com/tofail-ahmed/college-client"}
          />
          <ProjectSliderCard
            title={"Relief Aid"}
@@ -132,6 +136,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={relief3}
            img4={relief4}
            techs={reliefTechs}
+           liveLink={"https://relief-aid-client.vercel.app/"}
+           codeLink={"https://github.com/tofail-ahmed/relief-aid-client"}
          />
          <ProjectSliderCard
            title={"Athletic Excel"}
@@ -140,6 +146,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={ath3}
            img4={ath4}
            techs={athTechs}
+           liveLink={"https://athletic-excel.web.app/"}
+           codeLink={"https://github.com/tofail-ahmed/athletic-excel-client"}
          />
          <ProjectSliderCard
            title={"Fytobyte"}
@@ -148,6 +156,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={fyto3}
            img4={fyto4}
           techs={fytoTechs}
+          liveLink={"https://fyto-client.vercel.app/"}
+           codeLink={"https://github.com/tofail-ahmed/next-practice"}
          />
          <ProjectSliderCard
            title={"Kiddo Valley"}
@@ -156,6 +166,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={kiddo3}
            img4={kiddo4}
            techs={kiddoTechs}
+           liveLink={"https://kiddo-valley.web.app/"}
+           codeLink={"https://github.com/tofail-ahmed/kiddo-valley-client"}
            
          />
          <ProjectSliderCard
@@ -165,6 +177,8 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            img3={q3}
            img4={q4}
            techs={quisinneTechs}
+           liveLink={"https://quisinne-de-french.web.app/"}
+           codeLink={"https://github.com/tofail-ahmed/quisinne-client"}
          />
        </Slider>
      </div>

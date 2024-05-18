@@ -5,9 +5,10 @@ import TechStackCard from "./TechStackCard";
 import SwiperSlider from "./SwiperSlider";
 import { IoIosGlobe } from "react-icons/io";
 import { FaCode } from "react-icons/fa";
+import Link from 'next/link';
 
 
-const ProjectSliderCard = ({title,img1,img2,img3,img4,techs}) => {
+const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) => {
   
   return (
   
@@ -35,13 +36,13 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs}) => {
           
           <div className="flex justify-around items-center">
 
-            <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white px-2 rounded-lg">
+            <Link href={codeLink} className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white lg:p-2 p-1 rounded-lg">
            <span className='flex items-center gap-1'> <FaCode />Code</span>
-            </button>
+            </Link>
 
-            <button className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white px-2 rounded-lg">
-            <span className='flex items-center gap-1'><IoIosGlobe /> Demo</span>
-            </button>
+            <Link href={liveLink} className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-1 lg:p-2 rounded-lg">
+            <span className='flex items-center gap-1'><IoIosGlobe /> Live</span>
+            </Link>
 
           </div>
         </div>
