@@ -24,7 +24,7 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) 
           <h1 className="text-xl lg:text-3xl text-center font-bold">{title}</h1>
           {/* <h1 className="text-center">Description</h1> */}
 
-          <div className="flex flex-wrap gap-4 my-2">
+          <div className="flex flex-wrap gap-2 lg:gap-4 my-2">
             {
               techs&&techs.map((tech,index)=>(
                 <TechStackCard key={index} tech={tech} className="border-2 border-primary-500" />

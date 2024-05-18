@@ -85,7 +85,7 @@ const ProjectsSection = () => {
    ],
  };
 const fytoTechs= ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", ] ;
-const eventTechs=['ReactJs','Typescript','TailwindCSS','Framer Motion',"AOS","SwiperJs",'Tanstack Query'];
+const eventTechs=['ReactJs','Typescript','TailwindCSS','Framer Motion',"SwiperJs",'Tanstack Query'];
 const reliefTechs=['ReactJs','Typescript','TailwindCSS','Framer Motion','AOS',"Slicker",'Redux']
 const quisinneTechs=['ReactJs','Javascript','TailwindCSS','DaisyUI','React-dom','AOS'];
 const campusTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','Firebase',"Paralax"];
