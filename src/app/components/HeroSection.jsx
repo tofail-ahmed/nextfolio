@@ -43,7 +43,8 @@ const HeroSection = () => {
 
           <div>
             <Link
-              href="https://drive.google.com/file/d/1joei7ft1iHNA98MRIxg84ez15-r-fNTA/view?usp=sharing"
+              // href="https://drive.google.com/drive/folders/1nqmC0MKgH13WaqApUtGyaDnQfG1Kwo1J?usp=sharing"
+              href="https://drive.google.com/file/d/1wLCgJbaJv42-6E3D63IwaOlWp9-hMhq5/view?usp=sharing"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
               <span className="flex items-center justify-center gap-2">
@@ -52,9 +53,8 @@ const HeroSection = () => {
               </span>
             </Link>
             <a
-              // href={'/public/SayemResume_524.pdf'}
-              // download="/public/SayemResume_524.pdf"
-              href="https://drive.google.com/uc?export=download&id=1joei7ft1iHNA98MRIxg84ez15-r-fNTA"
+              
+              href="https://drive.google.com/uc?export=download&id=1wLCgJbaJv42-6E3D63IwaOlWp9-hMhq5"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
