@@ -46,6 +46,9 @@ import q2 from "../../../public/projects/quisinne/quisinne_chefs.jpg"
 import q3 from "../../../public/projects/quisinne/quisinne_login.jpg"
 import q4 from "../../../public/projects/quisinne/quisinne_recipe.jpg"
 
+import port1 from "../../../public/projects/portfolio/port-1.jpg" 
+import port2 from "../../../public/projects/portfolio/port-2.jpg" 
+import port3 from "../../../public/projects/portfolio/port-3.jpg" 
 
 
 const ProjectsSection = () => {
@@ -91,7 +94,7 @@ const quisinneTechs=['ReactJs','Javascript','TailwindCSS','DaisyUI','React-dom',
 const campusTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','Firebase',"Paralax"];
 const kiddoTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','AOS','Firebase','Toastify'];
 const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form','Firebase',]
-
+const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','Swiper','AOS']
  // const projects = [
  //   { title: "Event360", img1: event1, img2: event2, img3: event3, img4: event4 },
  //   { title: "Campus Guru", img1: campus1, img2: campus2, img3: campus3, img4: campus4 },
@@ -138,6 +141,17 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
            techs={reliefTechs}
            liveLink={"https://relief-aid-client.vercel.app/"}
            codeLink={"https://github.com/tofail-ahmed/relief-aid-client"}
+         />
+         <ProjectSliderCard
+           title={"Portfolio"}
+           img1={port1}
+           img2={port2}
+           img3={port3}
+           img4={port1}
+          
+           techs={portfolio}
+           liveLink={"https://relief-aid-client.vercel.app/"}
+           codeLink={"https://relief-aid-client.vercel.app/"}
          />
          <ProjectSliderCard
            title={"Athletic Excel"}
