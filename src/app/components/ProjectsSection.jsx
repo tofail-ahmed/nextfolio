@@ -52,6 +52,28 @@ import port3 from "../../../public/projects/portfolio/port-3.jpg"
 
 
 const ProjectsSection = () => {
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block",color:"red" }}
+        onClick={onClick}
+        
+      />
+    );
+  }
  var settings = {
    dots: true,
    infinite: false,
@@ -59,7 +81,8 @@ const ProjectsSection = () => {
    slidesToShow: 2,
    slidesToScroll: 1,
    initialSlide: 0,
-
+   nextArrow: <SampleNextArrow />,
+   prevArrow: <SamplePrevArrow className="text-red-500 text-5xl"  />,
    responsive: [
      {
        breakpoint: 1024,
@@ -95,16 +118,7 @@ const campusTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','Firebase',"Pa
 const kiddoTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','AOS','Firebase','Toastify'];
 const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form','Firebase',]
 const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','Swiper','AOS']
- // const projects = [
- //   { title: "Event360", img1: event1, img2: event2, img3: event3, img4: event4 },
- //   { title: "Campus Guru", img1: campus1, img2: campus2, img3: campus3, img4: campus4 },
- //   { title: "Relief Aid", img1: relief1, img2: relief2, img3: relief3, img4: relief4 },
- //   { title: "Athletic Excel", img1: ath1, img2: ath2, img3: ath3, img4: ath4 },
- //   { title: "Fytobyte", img1: fyto1, img2: fyto2, img3: fyto3, img4: fyto4, techs: ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", "AOS"] },
- //   { title: "Kiddo Valley", img1: kiddo1, img2: kiddo2, img3: kiddo3, img4: kiddo4 },
- //   { title: "Quisinne de French", img1: q1, img2: q2, img3: q3, img4: q4 },
- // ];
-
+ 
  
 
  return (
@@ -201,3 +215,12 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
 };
 
 export default ProjectsSection;
+// const projects = [
+ //   { title: "Event360", img1: event1, img2: event2, img3: event3, img4: event4 },
+ //   { title: "Campus Guru", img1: campus1, img2: campus2, img3: campus3, img4: campus4 },
+ //   { title: "Relief Aid", img1: relief1, img2: relief2, img3: relief3, img4: relief4 },
+ //   { title: "Athletic Excel", img1: ath1, img2: ath2, img3: ath3, img4: ath4 },
+ //   { title: "Fytobyte", img1: fyto1, img2: fyto2, img3: fyto3, img4: fyto4, techs: ["NextJs", "Javscript", "Redux", "TailwindCSS", "DaisyUI", "ParticleJs", "AOS"] },
+ //   { title: "Kiddo Valley", img1: kiddo1, img2: kiddo2, img3: kiddo3, img4: kiddo4 },
+ //   { title: "Quisinne de French", img1: q1, img2: q2, img3: q3, img4: q4 },
+ // ];
