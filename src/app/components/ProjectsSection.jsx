@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import SwiperSlider from "./SwiperSlider";
+import "./Project.css"
 
 import event1 from "../../../public/projects/event/event_home.jpg"
 import event2 from "../../../public/projects/event/event_gallery.jpg"
@@ -57,7 +58,7 @@ const ProjectsSection = () => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        style={{ ...style}}
         onClick={onClick}
       />
     );
@@ -68,7 +69,7 @@ const ProjectsSection = () => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block",color:"red" }}
+        style={{ ...style }}
         onClick={onClick}
         
       />
@@ -82,7 +83,7 @@ const ProjectsSection = () => {
    slidesToScroll: 1,
    initialSlide: 0,
    nextArrow: <SampleNextArrow />,
-   prevArrow: <SamplePrevArrow className="text-red-500 text-5xl"  />,
+   prevArrow: <SamplePrevArrow  />,
    responsive: [
      {
        breakpoint: 1024,
@@ -122,9 +123,9 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
  
 
  return (
-   <div className="" id="projects">
+   <div  id="projects">
      <Header title={"My Projects"} />
-     <div className="slider-container  p-8 ">
+     <div className="slider-container  px-8 ">
        <Slider {...settings}>
          <ProjectSliderCard
            title={"Event360"}

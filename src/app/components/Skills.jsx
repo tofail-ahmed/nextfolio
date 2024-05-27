@@ -29,7 +29,7 @@ import Image from "next/image";
 
 const Skills = () => {
   return (
-    <div className="my-32">
+    <div >
       <div className="text-white " id="skills">
         {/* <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
       <span className="text-primary-500" >&lt;</span>  My Skills <span className="text-primary-500" >/&gt;</span>

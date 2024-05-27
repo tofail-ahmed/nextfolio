@@ -13,8 +13,8 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) 
   return (
   
 
-    <div className="    text-primary-400 p-2">
-      <div className="border-2 border-secondary-400 rounded-md ">
+    <div className="    text-primary-600 p-2">
+      <div className="border-2 border-primary-600 rounded-md ">
        
         <SwiperSlider img1={img1} img2={img2} img3={img3} img4={img4} />
        
@@ -27,21 +27,21 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) 
           <div className="flex flex-wrap gap-2 lg:gap-4 my-2">
             {
               techs&&techs.map((tech,index)=>(
-                <TechStackCard key={index} tech={tech} className="border-2 border-primary-500" />
+                <TechStackCard key={index} tech={tech} className=" text-white" />
               ))
             }
             
            
           </div>
           
-          <div className="flex justify-around items-center">
+          <div className="flex flex-col gap-4">
 
-            <Link href={codeLink} className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white lg:p-2 p-1 rounded-lg">
-           <span className='flex items-center gap-1'> <FaCode />Code</span>
+            <Link href={codeLink} className="bg-primary-600 hover:bg-primary-800 w-full text-white lg:p-2 p-1 rounded-lg">
+           <span className='flex items-center gap-1 justify-center'> <FaCode />Code</span>
             </Link>
 
-            <Link href={liveLink} className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white p-1 lg:p-2 rounded-lg">
-            <span className='flex items-center gap-1'><IoIosGlobe /> Live</span>
+            <Link href={liveLink} className="bg-primary-600 w-full hover:bg-primary-800 text-white p-1 lg:p-2 rounded-lg">
+            <span className='flex items-center gap-1 justify-center'><IoIosGlobe /> Live</span>
             </Link>
 
           </div>
