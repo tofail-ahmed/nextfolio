@@ -1,11 +1,11 @@
 import React from 'react';
-
+import AntdDrawer from "../../components/AntdDrawer"
 const layout = ({children}) => {
       return (
           
-                 <div>
+                 <AntdDrawer>
                    {children}
-                 </div>
+                 </AntdDrawer>
            
       );
 };
