@@ -4,13 +4,16 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Header from "./Header";
 import ProjectSliderCard from "./ProjectSliderCard";
+import { TbPlayerTrackNextFilled } from "react-icons/tb";
+
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import SwiperSlider from "./SwiperSlider";
-import "./Project.css"
+import "./Project.css";
 
 import event1 from "../../../public/projects/event/event_home.jpg"
 import event2 from "../../../public/projects/event/event_gallery.jpg"
@@ -53,23 +56,27 @@ import port3 from "../../../public/projects/portfolio/port-3.jpg"
 
 
 const ProjectsSection = () => {
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style}}
+        style={{ ...style }}
         onClick={onClick}
-      />
+      >
+        
+      </div>
     );
   }
+
   
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style }}
+        style={{ ...style}}
         onClick={onClick}
         
       />

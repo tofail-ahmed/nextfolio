@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -25,9 +25,18 @@ const navLinks = [
     title: "Skills",
     path: "#skills",
   },
+ 
 ];
 
 const Navbar = () => {
+  // const [user,setUser]=useState(null)
+  
+  // const email = "atofail50@gmail.com";
+  //  const password = "123456";
+  //  const user={
+  //   email,password
+  //  }
+
   const [navbarOpen, setNavbarOpen] = useState(false);
   const closeNav = () => {
     setNavbarOpen(false);
@@ -59,6 +68,7 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
               <XMarkIcon className="h-5 w-5" />
+            
             </button>
           )}
         </div>
@@ -69,6 +79,13 @@ const Navbar = () => {
                 <NavLink href={link.path} title={link.title} />
               </li>
             ))}
+            <li>
+           {/* {
+
+            user? ( <NavLink href="/" title="Dashboard" />):(<NavLink href="/login" title="Login" />)
+           } */}
+<NavLink href="/dashboard" title="Dashboard" />
+            </li>
           </ul>
         </div>
       </div>
