@@ -1,6 +1,14 @@
-import React from 'react';
+"use client"
+import React ,{useEffect} from 'react';
 import AntdDrawer from "../../components/AntdDrawer"
-const layout = ({children}) => {
+const Layout = ({children}) => {
+  // useEffect(() => {
+  //   // Get user data from local storage
+  //   const user = localStorage.getItem('user');
+  //   if (user) {
+  //     setStoredUser(JSON.parse(user));
+  //   }
+  // }, []);
       return (
           
                  <AntdDrawer>
@@ -10,4 +18,4 @@ const layout = ({children}) => {
       );
 };
 
-export default layout;
+export default Layout;

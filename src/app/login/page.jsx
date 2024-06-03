@@ -1,28 +1,36 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import { useState } from "react";
 import { toast } from "sonner";
+
+
+
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
   
-const fixedUser={
-      email:"atofail50@gmail.com",
-      password:"01846283805"
-}
+
+  const fixedUser = {
+    email: "atofail50@gmail.com",
+    password: "123456"
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const user = { email, password };
     console.log(user);
-    if(user.email===fixedUser.email&&user.password===user.password){
+
+    if (user.email === fixedUser.email && user.password === fixedUser.password) {
       localStorage.setItem("user", JSON.stringify(user));
-      toast.success("Login Successfull")
+      toast.success("Login Successful");
       setEmail('');
       setPassword('');
-    }else{
-      toast.error("Login Failed")
+      router.push("/dashboard");
+    } else {
+      toast.error("Login Failed");
     }
-    
   };
 
   return (
