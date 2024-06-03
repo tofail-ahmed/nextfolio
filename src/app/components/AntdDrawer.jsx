@@ -15,6 +15,9 @@ const items = [
   { path: "contact", icon: <UserOutlined />, label: "Contact" },
   { path: "books", icon: <VideoCameraOutlined />, label: "Books" },
   { path: "about", icon: <UploadOutlined />, label: "About" },
+  { path: "addProject", icon: <UserOutlined />, label: "Add Project" },
+  { path: "addSkills", icon: <VideoCameraOutlined />, label: "Add Skill" },
+  { path: "addBlog", icon: <UploadOutlined />, label: "Add Blog" },
 ];
 
 const AntdDrawer = ({ children }) => {

@@ -13,7 +13,7 @@ const [storedUser,setStoredUser]=useState()
       setStoredUser(JSON.parse(user));
     }
    if(!storedUser){
-    router.push('/')
+    router.push('/login')
    }
   }, [router,storedUser]);
   console.log(storedUser)
