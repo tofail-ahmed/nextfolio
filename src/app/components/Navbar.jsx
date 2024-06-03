@@ -25,6 +25,10 @@ const navLinks = [
     title: "Skills",
     path: "#skills",
   },
+  {
+    title: "Login",
+    path: "/login",
+  },
  
 ];
 
@@ -84,7 +88,7 @@ const Navbar = () => {
 
             user? ( <NavLink href="/" title="Dashboard" />):(<NavLink href="/login" title="Login" />)
            } */}
-<NavLink href="/login" title="Login" />
+{/* <NavLink href="/login" title="Login" /> */}
             </li>
           </ul>
         </div>

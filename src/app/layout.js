@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           error: 'text-red-400',
           success: 'text-green-400 ',
           warning: 'text-yellow-400',
-          info: 'bg-blue-400',
+          info: 'text-blue-400',
         },
       }} />
       <body className={inter.className}>

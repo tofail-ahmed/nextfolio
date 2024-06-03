@@ -27,5 +27,5 @@ module.exports = {
       slate: colors.slate,   // blueGray renamed to slate
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };
