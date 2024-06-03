@@ -84,7 +84,7 @@ const Navbar = () => {
 
             user? ( <NavLink href="/" title="Dashboard" />):(<NavLink href="/login" title="Login" />)
            } */}
-<NavLink href="/dashboard" title="Dashboard" />
+<NavLink href="/login" title="Login" />
             </li>
           </ul>
         </div>

@@ -7,6 +7,8 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
 import Link from "next/link";
+import logo from "../../../public/images/Tofail.png";
+import Image from "next/image";
 const { Sider } = Layout;
 
 const items = [
@@ -36,19 +38,31 @@ const AntdDrawer = ({ children }) => {
           position: "fixed",
           left: 0,
           zIndex: 1,
+          
         }}
+      
       >
-        <div className="demo-logo-vertical" />
+            <Link href="/">
+            <Image 
+            // style={{margin:"16px 16px"}}
+          className="flex justify-center my-4 items-center mx-auto "
+          width={100}
+          height={80}
+          src={logo}
+          alt="logo"
+        />
+            </Link>
+        
+
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["4"]}>
           {items.map((item) => (
             <Menu.Item key={item.path} icon={item.icon}>
-              <Link href={`/dashboard/${item.path}`}>{item.label}</Link>
+              <Link className="mx-auto" href={`/dashboard/${item.path}`}>{item.label}</Link>
             </Menu.Item>
           ))}
         </Menu>
       </Sider>
       <Layout className="lg:ms-[200px] ms-0">
-      
         <Layout.Content
           style={{
             // margin: "24px 16px 0",

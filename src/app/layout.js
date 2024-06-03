@@ -15,13 +15,13 @@ export default function RootLayout({ children }) {
       <Toaster toastOptions={{
         style:{
           border: "2px #4A044E solid",
-          background:"#A855F7",
+          background:"#FFF",
           
           
         },
         classNames: {
-          error: 'bg-red-400',
-          success: 'text-green-400',
+          error: 'text-red-400',
+          success: 'text-green-400 ',
           warning: 'text-yellow-400',
           info: 'bg-blue-400',
         },
