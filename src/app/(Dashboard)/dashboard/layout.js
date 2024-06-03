@@ -1,14 +1,22 @@
 "use client"
-import React ,{useEffect} from 'react';
+import React ,{useEffect,useState} from 'react';
 import AntdDrawer from "../../components/AntdDrawer"
+import { useRouter } from 'next/navigation';
+
 const Layout = ({children}) => {
-  // useEffect(() => {
-  //   // Get user data from local storage
-  //   const user = localStorage.getItem('user');
-  //   if (user) {
-  //     setStoredUser(JSON.parse(user));
-  //   }
-  // }, []);
+  const router=useRouter()
+const [storedUser,setStoredUser]=useState()
+  useEffect(() => {
+    // Get user data from local storage
+    const user = localStorage.getItem('user');
+    if (user) {
+      setStoredUser(JSON.parse(user));
+    }
+   if(!storedUser){
+    router.push('/')
+   }
+  }, [router,storedUser]);
+  console.log(storedUser)
       return (
           
                  <AntdDrawer>
