@@ -28,7 +28,7 @@ const fixedUser={
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
-        <h2>Login</h2>
+        <h2 className="text-primary-500 font-bold text-center my-2">Login</h2>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
