@@ -6,7 +6,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import logo from "../../../public/images/Tofail.png"
 import Image from "next/image";
-
+import { useDispatch } from "react-redux";
+import { toggleDarkMode } from "@/redux/theme/themeSlice";
+import { Provider, useSelector } from "react-redux";
 
 const navLinks = [
   {
@@ -25,14 +27,19 @@ const navLinks = [
     title: "Skills",
     path: "#skills",
   },
-  {
-    title: "Login",
-    path: "/login",
-  },
+  // {
+  //   title: "Login",
+  //   path: "/login",
+  // },
  
 ];
 
 const Navbar = () => {
+  const darkMode = useSelector((state) => state.theme.darkMode);
+  const dispatch=useDispatch();
+  const handleTheme=()=>{
+    dispatch(toggleDarkMode())
+  }
   // const [user,setUser]=useState(null)
   
   // const email = "atofail50@gmail.com";
@@ -84,10 +91,9 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-           {/* {
-
-            user? ( <NavLink href="/" title="Dashboard" />):(<NavLink href="/login" title="Login" />)
-           } */}
+           {/* <button className="p-2 bg-green-300 rounded-md" onClick={handleTheme}>
+        {darkMode ? "Light Theme" : "Dark Theme"}
+      </button> */}
 {/* <NavLink href="/login" title="Login" /> */}
             </li>
           </ul>

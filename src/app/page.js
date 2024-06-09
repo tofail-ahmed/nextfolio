@@ -9,11 +9,10 @@ import Skills from "./components/Skills";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col ">
       <Navbar />
       <div className="container mt-24 mx-auto lg:px-12 px-4 py-4">
         <HeroSection />
-        {/* <AchievementsSection /> */}
         <AboutSection />
         <Skills/>
         <ProjectsSection />

@@ -46,34 +46,21 @@ export default function AddProject() {
   };
 
   const confirmDelete = (id) => {
-    toast.warning("Deleted method to be implemented yet!!")
-    // toast.info(
-    //   <div>
-    //     <p>Are you sure you want to delete this item?</p>
-    //     <div className="flex gap-4">
-    //       <button
-    //         className="bg-red-300 px-2 rounded-md"
-    //         onClick={() => handleDelete(id)}
-    //       >
-    //         Yes
-    //       </button>
-    //       <button
-    //         className="bg-green-300 px-2 rounded-md"
-    //         onClick={() => toast.dismiss}
-    //       >
-    //         No
-    //       </button>
-    //     </div>
-    //   </div>,
-    //   {
-    //     position: "top-right",
-    //     autoClose: false,
-    //     closeOnClick: true,
-    //     closeButton: true,
-    //     draggable: false,
-    //     progress: undefined,
-    //   }
-    // );
+    // toast.warning("Deleted method to be implemented yet!!")
+    toast.warning(
+      <div>
+        <p>Are you sure you want to delete this item?</p>
+        <div className="flex gap-4">
+          <button
+            className="bg-red-300 px-2 rounded-md"
+            onClick={() => handleDelete(id)}
+          >
+            Yes
+          </button>
+         
+        </div>
+      </div>
+    );
   };
 
 
