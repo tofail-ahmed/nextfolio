@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 
 const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) => {
+ 
   
   return (
   

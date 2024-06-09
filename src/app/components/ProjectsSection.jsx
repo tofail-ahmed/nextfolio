@@ -53,6 +53,7 @@ import q4 from "../../../public/projects/quisinne/quisinne_recipe.jpg"
 import port1 from "../../../public/projects/portfolio/port-1.jpg" 
 import port2 from "../../../public/projects/portfolio/port-2.jpg" 
 import port3 from "../../../public/projects/portfolio/port-3.jpg" 
+import { useAllProjectQuery } from "@/redux/projects/projectApi";
 
 
 const ProjectsSection = () => {
@@ -127,14 +128,31 @@ const kiddoTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','AOS','Firebase
 const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form','Firebase',]
 const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','Swiper','AOS']
  
- 
-
+ const {data,isLoading}=useAllProjectQuery("")
+console.log("isLoading",isLoading)
+console.log("data",data?.data)
  return (
    <div  id="projects">
      <Header title={"My Projects"} />
      <div className="slider-container  px-8 ">
        <Slider {...settings}>
-         <ProjectSliderCard
+       {
+        data?.data.map((project)=>
+          <ProjectSliderCard key={project._id}
+        title={project.name}
+        img1={project.img1}
+        img2={project.img2}
+        img3={project.img3}
+        img4={project.img4}
+        techs={project.techs}
+        liveLink={project.live}
+        codeLink={project.github}
+      />
+        )
+       }
+
+
+         {/* <ProjectSliderCard
            title={"Event360"}
            img1={event1}
            img2={event2}
@@ -215,7 +233,7 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
            techs={quisinneTechs}
            liveLink={"https://quisinne-de-french.web.app/"}
            codeLink={"https://github.com/tofail-ahmed/quisinne-client"}
-         />
+         /> */}
        </Slider>
      </div>
    </div>

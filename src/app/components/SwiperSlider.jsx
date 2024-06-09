@@ -14,6 +14,7 @@ import './SwiperSlide.css';
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const SwiperSlider = ({ img1, img2, img3, img4 }) => {
+  console.log(img1,img2,img3,img4)
   return (
     <div className="">
       <Swiper
@@ -29,19 +30,19 @@ const SwiperSlider = ({ img1, img2, img3, img4 }) => {
         className="mySwiper rounded-t-md"
       >
         <SwiperSlide>
-          <Image src={img1} alt="img" />
+          <Image src={img1} alt="img" width={300} height={300} />
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={img2} alt="img" />
+          <Image src={img2} alt="img" width={300} height={300} />
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={img3} alt="img" />
+          <Image src={img3} alt="img" width={300} height={300} />
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image src={img4} alt="img" />
+          <Image src={img4} alt="img" width={300} height={300} />
         </SwiperSlide>
       </Swiper>
     </div>
