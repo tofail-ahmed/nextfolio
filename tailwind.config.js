@@ -17,10 +17,10 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: colors.purple,
+      primary: colors.teal,
       secondary: colors.pink,
       // Use the new color names directly
-      sky: colors.sky,       // lightBlue renamed to sky
+      // sky: colors.sky,       // lightBlue renamed to sky
       stone: colors.stone,   // warmGray renamed to stone
       neutral: colors.neutral, // trueGray renamed to neutral
       gray: colors.gray,     // coolGray renamed to gray
