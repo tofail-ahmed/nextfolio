@@ -59,7 +59,9 @@ export default function Projects() {
     );
   };
 
-
+if(isLoading){
+  return <h1 className="text-center text-4xl font-bold text-green-400">Loading data...</h1>
+}
 
   return (
     <div className="max-w-[1200px] mx-auto overflow-y-auto p-4" >
@@ -81,18 +83,19 @@ export default function Projects() {
         <table className="min-w-full bg-white/0">
           <thead>
             <tr>
-              <th className="py-2 px-4 border-b">ID</th>
+              {/* <th className="py-2 px-4 border-b">ID</th> */}
               {/* <th className="py-2 px-4 border-b">Snap</th> */}
               <th className="py-2 px-4 border-b">Name</th>
               <th className="py-2 px-4 border-b">Techs</th>
               <th className="py-2 px-4 border-b">Live</th>
               <th className="py-2 px-4 border-b">Github</th>
+              <th className="py-2 px-4 border-b">Actions</th>
             </tr>
           </thead>
           <tbody>
             {data?.data.map((project) => (
               <tr key={project._id}>
-                <td className="py-2 px-4 border-b">{project._id}</td>
+                {/* <td className="py-2 px-4 border-b">{project._id}</td> */}
                 {/* <td className="py-2 px-4 border-b">
                   <div className="flex items-center gap-3">
                     <div className="avatar">
@@ -109,7 +112,14 @@ export default function Projects() {
                 </td> */}
                 <td className="py-2 px-4 border-b">{project.name}</td>
                 {/* <td className="py-2 px-4 border-b">{project.description}</td> */}
-                <td className="py-2 px-4 border-b">${(project.techs).join(',')}</td>
+                <td className="py-2 px-4 border-b">{(project.techs).join(', ')}</td>
+                <td className="py-2 px-4 border-b">
+                  <a className="text-blue-500 font-semibold" href={project.live}>Live</a>
+                </td>
+                <td className="py-2 px-4 border-b">
+                  <a className="text-blue-500 font-semibold" href={project.github}>Github</a>
+                </td>
+                
                 <td className="py-2 px-4 border-b">
                   <div className="flex flex-col gap-2">
                     <button
@@ -118,7 +128,7 @@ export default function Projects() {
                     >
                       Update
                     </button>
-                    <button onClick={() => confirmDelete(project.id)} className="btn btn-error btn-xs">Delete</button>
+                    <button onClick={() => confirmDelete(project._id)} className="btn btn-error btn-xs">Delete</button>
                   </div>
                 </td>
               </tr>
