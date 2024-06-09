@@ -14,7 +14,7 @@ import './SwiperSlide.css';
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const SwiperSlider = ({ img1, img2, img3, img4 }) => {
-  console.log(img1,img2,img3,img4)
+  // console.log(img1,img2,img3,img4)
   return (
     <div className="">
       <Swiper

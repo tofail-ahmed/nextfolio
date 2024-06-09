@@ -8,18 +8,14 @@ import UpdateModal from "../../../components/ProjectUpdateModal";
 // import { deletefood } from "@/redux/reducers/foodReducer";
 import foods from "../../../../../foods.json"
 import {toast} from "sonner"
+import { useAllProjectQuery } from "@/redux/projects/projectApi";
 
 
 
 
-export default function AddProject() {
+export default function Projects() {
  
-  // const dispatch = useAppDispatch();
-
-
-
-  // const foods = useAppSelector((state) => state.foodItems);
-// console.log(foods)
+  const {data,isLoading}=useAllProjectQuery('')
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [currentFoodItem, setCurrentFoodItem] = useState(null);
@@ -86,23 +82,23 @@ export default function AddProject() {
           <thead>
             <tr>
               <th className="py-2 px-4 border-b">ID</th>
-              <th className="py-2 px-4 border-b">Snap</th>
+              {/* <th className="py-2 px-4 border-b">Snap</th> */}
               <th className="py-2 px-4 border-b">Name</th>
-              <th className="py-2 px-4 border-b">Description</th>
-              <th className="py-2 px-4 border-b">Price</th>
-              <th className="py-2 px-4 border-b">Actions</th>
+              <th className="py-2 px-4 border-b">Techs</th>
+              <th className="py-2 px-4 border-b">Live</th>
+              <th className="py-2 px-4 border-b">Github</th>
             </tr>
           </thead>
           <tbody>
-            {foods.map((food) => (
-              <tr key={food.id}>
-                <td className="py-2 px-4 border-b">{food.id}</td>
-                <td className="py-2 px-4 border-b">
+            {data?.data.map((project) => (
+              <tr key={project._id}>
+                <td className="py-2 px-4 border-b">{project._id}</td>
+                {/* <td className="py-2 px-4 border-b">
                   <div className="flex items-center gap-3">
                     <div className="avatar">
                       <div className="mask mask-squircle">
                         <Image
-                          src={food.image}
+                          src={project.name}
                           alt={food.name}
                           width={50}
                           height={50}
@@ -110,19 +106,19 @@ export default function AddProject() {
                       </div>
                     </div>
                   </div>
-                </td>
-                <td className="py-2 px-4 border-b">{food.name}</td>
-                <td className="py-2 px-4 border-b">{food.description}</td>
-                <td className="py-2 px-4 border-b">${food.price}</td>
+                </td> */}
+                <td className="py-2 px-4 border-b">{project.name}</td>
+                {/* <td className="py-2 px-4 border-b">{project.description}</td> */}
+                <td className="py-2 px-4 border-b">${(project.techs).join(',')}</td>
                 <td className="py-2 px-4 border-b">
                   <div className="flex flex-col gap-2">
                     <button
                       className="btn btn-info btn-xs"
-                      onClick={() => openUpdateModal(food)}
+                      onClick={() => openUpdateModal(project)}
                     >
                       Update
                     </button>
-                    <button onClick={() => confirmDelete(food.id)} className="btn btn-error btn-xs">Delete</button>
+                    <button onClick={() => confirmDelete(project.id)} className="btn btn-error btn-xs">Delete</button>
                   </div>
                 </td>
               </tr>
