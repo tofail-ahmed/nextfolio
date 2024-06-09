@@ -79,11 +79,14 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
               <XMarkIcon className="h-5 w-5" />
-            
             </button>
           )}
         </div>
-        <div onClick={closeNav} className="menu hidden md:block md:w-auto" id="navbar">
+        <div
+          onClick={closeNav}
+          className="menu hidden md:block md:w-auto"
+          id="navbar"
+        >
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -91,15 +94,18 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-           {/* <button className="p-2 bg-green-300 rounded-md" onClick={handleTheme}>
-        {darkMode ? "Light Theme" : "Dark Theme"}
-      </button> */}
-{/* <NavLink href="/login" title="Login" /> */}
+              <button
+                className="p-2 bg-green-300 rounded-md"
+                onClick={handleTheme}
+              >
+                {darkMode ? "Light Theme" : "Dark Theme"}
+              </button>
+              {/* <NavLink href="/login" title="Login" /> */}
             </li>
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay  links={navLinks} closeNav={closeNav} /> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} closeNav={closeNav} /> : null}
     </nav>
   );
 };

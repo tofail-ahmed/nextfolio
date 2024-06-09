@@ -32,7 +32,7 @@ function RootContent({ children }) {
     <html lang="en">
       <body
         className={`${inter.className} ${
-          darkMode ? "bg-black text-white" : "bg-white text-black"
+          darkMode ? "bg-black text-white" : "bg-slate-300 text-black"
         }`}
       >
         <div>
