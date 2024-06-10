@@ -9,7 +9,7 @@ const ProjectUpdateModal = ({ closeUpdateModal,initialData }) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     defaultValues: initialData
   });
-//   const dispatch=useAppDispatch()
+
 
   React.useEffect(() => {
     reset(initialData);
@@ -26,48 +26,113 @@ closeUpdateModal();
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-slate-200/30 backdrop-blur-md p-6 rounded-md shadow-lg">
-        <h3 className="font-bold text-lg">Update Food Item</h3>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <h3 className="font-bold text-lg">Update Project</h3>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 py-4 my-4">
           <div>
             <label className="block">Name</label>
             <input
               {...register("name", { required: "Name is required" })}
               className="w-full p-2 border rounded"
               type="text"
+              placeholder="Name"
             />
-            {errors.name && <span className="text-red-500">{errors.name.message}</span>}
+            {errors.name && (
+              <span className="text-red-500">{errors.name.message}</span>
+            )}
           </div>
           <div>
-            <label className="block">Description</label>
+            <label className="block">Images</label>
             <input
-              {...register("description", { required: "Description is required" })}
+              {...register("img1", {
+                required: "Image-1 is required",
+              })}
+              className="w-full p-2 border rounded my-2"
+              type="url"
+              placeholder="Image-1"
+            />
+            {errors.img1 && (
+              <span className="text-red-500">{errors.img1.message}</span>
+            )}
+            <input
+              {...register("img2", {
+                required: "Image-2 is required",
+              })}
+              className="w-full p-2 border rounded my-2"
+              type="url"
+              placeholder="Image-2"
+            />
+            {errors.img2 && (
+              <span className="text-red-500">{errors.img2.message}</span>
+            )}
+            <input
+              {...register("img3", {
+                required: "Image-3 is required",
+              })}
+              className="w-full p-2 border rounded my-2"
+              type="url"
+              placeholder="Image-3"
+            />
+            {errors.img3 && (
+              <span className="text-red-500">{errors.img3.message}</span>
+            )}
+            <input
+              {...register("img4", {
+                required: "Image-4 is required",
+              })}
+              className="w-full p-2 border rounded my-2"
+              type="url"
+              placeholder="Image-4"
+            />
+            {errors.img4 && (
+              <span className="text-red-500">{errors.img4.message}</span>
+            )}
+          </div>
+          <div>
+            <label className="block">Technologies</label>
+            <input
+              {...register("techs", {
+                required: "Technologies is required",
+              })}
               className="w-full p-2 border rounded"
               type="text"
             />
-            {errors.description && <span className="text-red-500">{errors.description.message}</span>}
+            <span className="text-xs text-slate-900">N.B: Use comma(,) after each technology</span>
+            <br />
+            {errors.techs && (
+              <span className="text-red-500">{errors.techs.message}</span>
+            )}
           </div>
           <div>
-            <label className="block">Price</label>
+            <label className="block">Live URL</label>
             <input
-              {...register("price", { required: "Price is required", valueAsNumber: true })}
+              {...register("live", { required: "Live URL is required" })}
               className="w-full p-2 border rounded"
-              type="number"
-              step="0.01"
+              type="url"
+              placeholder="Live URL"
             />
-            {errors.price && <span className="text-red-500">{errors.price.message}</span>}
+            {errors.live && (
+              <span className="text-red-500">{errors.live.message}</span>
+            )}
           </div>
           <div>
-            <label className="block">Image URL</label>
+            <label className="block">Github URL</label>
             <input
-              {...register("image", { required: "Image URL is required" })}
+              {...register("github", { required: "Github URL is required" })}
               className="w-full p-2 border rounded"
-              type="text"
+              type="url"
+              placeholder="Github URL"
             />
-            {errors.image && <span className="text-red-500">{errors.image.message}</span>}
+            {errors.github && (
+              <span className="text-red-500">{errors.github.message}</span>
+            )}
           </div>
           <div className="flex justify-end space-x-2">
-            <button type="button" className="btn" onClick={closeUpdateModal}>Close</button>
-            <button type="submit" className="btn btn-primary">Update</button>
+            <button type="button" className="btn" onClick={closeUpdateModal}>
+              Close
+            </button>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
           </div>
         </form>
       </div>
