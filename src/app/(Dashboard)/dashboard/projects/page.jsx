@@ -19,7 +19,7 @@ export default function Projects() {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [currentFoodItem, setCurrentFoodItem] = useState(null);
-
+console.log(data)
   const openCreateModal = () => {
     setShowCreateModal(true);
   };

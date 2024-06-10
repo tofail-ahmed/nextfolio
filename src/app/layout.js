@@ -10,7 +10,7 @@ import { PersistGate } from "redux-persist/integration/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+const metadata = {
   title: "Tofail Ahmed",
   description: "Portfolio website by Tofail Ahmed",
 };

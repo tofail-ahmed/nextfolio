@@ -9,6 +9,9 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { toggleDarkMode } from "@/redux/theme/themeSlice";
 import { Provider, useSelector } from "react-redux";
+import { FiMoon } from "react-icons/fi";
+import { IoSunny } from "react-icons/io5";
+
 
 const navLinks = [
   {
@@ -95,10 +98,10 @@ const Navbar = () => {
             ))}
             <li>
               <button
-                className="p-2 bg-green-300 rounded-md"
+                className="p-2  rounded-md"
                 onClick={handleTheme}
               >
-                {darkMode ? "Light Theme" : "Dark Theme"}
+                {darkMode ? <IoSunny /> : <FiMoon />}
               </button>
               {/* <NavLink href="/login" title="Login" /> */}
             </li>

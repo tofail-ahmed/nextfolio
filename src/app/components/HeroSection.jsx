@@ -45,7 +45,7 @@ const HeroSection = () => {
             <Link
               // href="https://drive.google.com/drive/folders/1nqmC0MKgH13WaqApUtGyaDnQfG1Kwo1J?usp=sharing"
               href="https://drive.google.com/file/d/1wLCgJbaJv42-6E3D63IwaOlWp9-hMhq5/view?usp=sharing"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-primary-600 hover:bg-slate-200 text-white"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-primary-600 hover:bg-slate-800 text-white"
             >
               <span className="flex items-center justify-center gap-2">
                 <FaEye  className="text-lg lg:text-xl" />
@@ -57,7 +57,7 @@ const HeroSection = () => {
               href="https://drive.google.com/uc?export=download&id=1wLCgJbaJv42-6E3D63IwaOlWp9-hMhq5"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-primary-600  hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block bg-tranparent hover:bg-slate-800 rounded-full px-5 py-2">
                 <span className="flex items-center justify-center gap-2">
                   <MdDownloadForOffline className="text-lg lg:text-xl" />
                   <p>Download Resume</p>
@@ -71,7 +71,7 @@ const HeroSection = () => {
             initial={{ opacity: 1, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="rounded-full bg-[#181818] w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] relative border-2 border-primary-600"
+            className="rounded-full bg-transparent w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] relative border-2 border-primary-600"
           >
             <Image
               src={profileImg}

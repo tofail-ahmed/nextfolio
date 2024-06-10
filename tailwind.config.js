@@ -17,7 +17,7 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: colors.teal,
+      primary: colors.purple,
       secondary: colors.pink,
       // Use the new color names directly
       // sky: colors.sky,       // lightBlue renamed to sky
