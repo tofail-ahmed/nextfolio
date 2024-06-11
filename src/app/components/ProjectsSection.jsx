@@ -129,17 +129,17 @@ const athTechs=['ReactJs','TailwindCSS','Javascript','DaisyUI','React Hook Form'
 const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','Swiper','AOS']
  
  const {data,isLoading}=useAllProjectQuery("")
-console.log("isLoading",isLoading)
-console.log("data",data?.data)
-if(isLoading){
-  return <div className="text-4xl font-bold text-center text-orange-500">Loading...</div>
-}
+// console.log("isLoading",isLoading)
+// console.log("data",data?.data)
+// if(isLoading){
+//   return <div className="text-4xl font-bold text-center text-orange-500">Loading...</div>
+// }
  return (
    <div  id="projects">
      <Header title={"My Projects"} />
      <div className="slider-container  px-8 ">
        <Slider {...settings}>
-       {
+       {/* {
         data?.data.map((project)=>
           <ProjectSliderCard key={project._id}
         title={project.name}
@@ -152,10 +152,10 @@ if(isLoading){
         codeLink={project.github}
       />
         )
-       }
+       } */}
 
 
-         {/* <ProjectSliderCard
+         <ProjectSliderCard
            title={"Event360"}
            img1={event1}
            img2={event2}
@@ -236,7 +236,7 @@ if(isLoading){
            techs={quisinneTechs}
            liveLink={"https://quisinne-de-french.web.app/"}
            codeLink={"https://github.com/tofail-ahmed/quisinne-client"}
-         /> */}
+         />
        </Slider>
      </div>
    </div>

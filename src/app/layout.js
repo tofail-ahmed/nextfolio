@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 
 function RootContent({ children }) {
   const darkMode = useSelector((state) => state.theme.darkMode);
-  console.log(darkMode);
+  // console.log(darkMode);
   return (
     <html lang="en">
       <body
