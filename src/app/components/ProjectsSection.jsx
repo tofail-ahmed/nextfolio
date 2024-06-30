@@ -139,7 +139,7 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
      <Header title={"My Projects"} />
      <div className="slider-container  px-8 ">
        <Slider {...settings}>
-       {/* {
+       {
         data?.data.map((project)=>
           <ProjectSliderCard key={project._id}
         title={project.name}
@@ -152,10 +152,10 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
         codeLink={project.github}
       />
         )
-       } */}
+       }
 
 
-         <ProjectSliderCard
+         {/* <ProjectSliderCard
            title={"Event360"}
            img1={event1}
            img2={event2}
@@ -236,7 +236,7 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
            techs={quisinneTechs}
            liveLink={"https://quisinne-de-french.web.app/"}
            codeLink={"https://github.com/tofail-ahmed/quisinne-client"}
-         />
+         /> */}
        </Slider>
      </div>
    </div>

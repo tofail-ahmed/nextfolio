@@ -15,7 +15,7 @@ import { useAllProjectQuery } from "@/redux/projects/projectApi";
 
 export default function Projects() {
  
-  const {data,isLoading}=useAllProjectQuery('')
+  const {data,isLoading}=useAllProjectQuery("")
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [currentFoodItem, setCurrentFoodItem] = useState(null);

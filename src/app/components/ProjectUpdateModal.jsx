@@ -1,4 +1,4 @@
-import { useUpdateProjectMutation } from "@/redux/projects/projectApi";
+import { useAllProjectQuery, useUpdateProjectMutation } from "@/redux/projects/projectApi";
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -43,10 +43,11 @@ const ProjectUpdateModal = ({ closeUpdateModal, initialData }) => {
         closeUpdateModal();
         if (response.data.success === true) {
           toast.success("Project Updated Successfully");
+          useAllProjectQuery.invalidate()
         }
       })
       .catch((error) => {
-        // console.error('Failed to update project', error);
+        console.error('Failed to update project', error);
         toast.error(error);
         closeUpdateModal();
       });
