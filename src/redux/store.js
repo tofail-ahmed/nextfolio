@@ -1,4 +1,4 @@
-// src/redux/store.js
+"use client"
 import { configureStore } from '@reduxjs/toolkit';
 import { baseApi } from './baseApi';
 import themeReducer from '../redux/theme/themeSlice.jsx';

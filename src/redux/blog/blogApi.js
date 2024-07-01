@@ -1,6 +1,7 @@
+
 const { baseApi } = require("../baseApi");
 
-const projectApi=baseApi.injectEndpoints({
+const blogApi=baseApi.injectEndpoints({
       endpoints:(builder)=>({
             allBlog:builder.query({
                   query:()=>({
@@ -11,3 +12,5 @@ const projectApi=baseApi.injectEndpoints({
             })
       })
 })
+
+export const {useAllBlogQuery}=blogApi;
