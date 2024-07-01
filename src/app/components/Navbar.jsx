@@ -30,10 +30,10 @@ const navLinks = [
     title: "Skills",
     path: "#skills",
   },
-  // {
-  //   title: "Login",
-  //   path: "/login",
-  // },
+  {
+    title: "Blogs",
+    path: "#blogs",
+  },
  
 ];
 
