@@ -130,10 +130,10 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
  
  const {data,isLoading}=useAllProjectQuery("")
 // console.log("isLoading",isLoading)
-// console.log("data",data?.data)
-// if(isLoading){
-//   return <div className="text-4xl font-bold text-center text-orange-500">Loading...</div>
-// }
+console.log("data",data?.data)
+if(isLoading){
+  return <div className="text-4xl font-bold text-center text-orange-500">Loading...</div>
+}
  return (
    <div  id="projects">
      <Header title={"My Projects"} />
@@ -150,6 +150,7 @@ const portfolio=['NextJs','TailwindCSS','Javascript','Framer Motion','EmailJs','
         techs={project.techs}
         liveLink={project.live}
         codeLink={project.github}
+        overview={project.overview}
       />
         )
        }

@@ -8,7 +8,7 @@ import { FaCode } from "react-icons/fa";
 import Link from 'next/link';
 
 
-const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) => {
+const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink,overview}) => {
  
   
   return (
@@ -23,8 +23,8 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink}) 
         <div className="p-2 ">
 
           <h1 className="text-xl lg:text-3xl text-center font-bold">{title}</h1>
-          {/* <h1 className="text-center">Description</h1> */}
-
+         
+ <h1 className="text-center text-sx">{overview}</h1>
           <div className="flex flex-wrap gap-2 lg:gap-4 my-2">
             {
               techs&&techs.map((tech,index)=>(

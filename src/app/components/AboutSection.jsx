@@ -31,14 +31,12 @@ const AboutSection = () => {
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full items-start justify-center">
             {/* <h1 className="text-xl lg:text-3xl text-primary-500 text-start flex">BSc in Engineering Graduate</h1> */}
 
-            <p className="text-base lg:text-lg">
-              I am a full stack web developer with a passion for creating
-              interactive and responsive web applications. I have experience
-              working with JavaScript, Typescript, React, NsxtJs, Redux, Node.js, Express,
-              Mongodb, Firebase, HTML, CSS, and Git. I am a quick learner
-              and I am always looking to expand my knowledge and skill set. I am
-              a team player and I am excited to work with others to create
-              amazing applications.
+            <p className="text-sm text-justify">
+            I am Tofail Ahmed, a frontend web developer from Chittagong, Bangladesh. With a strong passion for web development, I specialize in ReactJS and NextJS, focusing on creating visually appealing and efficient web solutions. My expertise includes JavaScript, TypeScript, Redux, and various modern web technologies, which enable me to build responsive and user-friendly interfaces.
+
+            Collaboration and innovation are at the core of my work ethic. I thrive in dynamic environments where teamwork drives success, and I am dedicated to exceeding client expectations through meticulous attention to detail and a deep understanding of user experience principles.
+
+            Feel free to explore my projects on GitHub and connect with me on LinkedIn.
             </p>
             
           </div>
