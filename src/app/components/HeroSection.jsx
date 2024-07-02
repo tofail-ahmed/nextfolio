@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import profileImg from "../../../public/images/profile_img.png" 
+import profileImg from "../../../public/images/sayem.png" 
 import { MdDownloadForOffline } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 
@@ -76,7 +76,8 @@ const HeroSection = () => {
             <Image
               src={profileImg}
               alt="hero image"
-              className="absolute w-full rounded-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute w-full rounded-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+             
               width={300}
               height={300}
             />

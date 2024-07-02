@@ -33,9 +33,9 @@ const AboutSection = () => {
 
             <p className="text-sm text-justify">
             I am Tofail Ahmed, a frontend web developer from Chittagong, Bangladesh. With a strong passion for web development, I specialize in ReactJS and NextJS, focusing on creating visually appealing and efficient web solutions. My expertise includes JavaScript, TypeScript, Redux, and various modern web technologies, which enable me to build responsive and user-friendly interfaces.
-
+<br />
             Collaboration and innovation are at the core of my work ethic. I thrive in dynamic environments where teamwork drives success, and I am dedicated to exceeding client expectations through meticulous attention to detail and a deep understanding of user experience principles.
-
+<br />
             Feel free to explore my projects on GitHub and connect with me on LinkedIn.
             </p>
             

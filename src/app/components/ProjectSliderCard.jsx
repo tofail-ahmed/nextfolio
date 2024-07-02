@@ -24,7 +24,7 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink,ov
 
           <h1 className="text-xl lg:text-3xl text-center font-bold">{title}</h1>
          
- <h1 className="text-center text-sx">{overview}</h1>
+ <h1 className="text-center text-sx lg:block sm:hidden">{overview}</h1>
           <div className="flex flex-wrap gap-2 lg:gap-4 my-2">
             {
               techs&&techs.map((tech,index)=>(
@@ -32,7 +32,7 @@ const ProjectSliderCard = ({title,img1,img2,img3,img4,techs,codeLink,liveLink,ov
               ))
             }
             
-           
+         
           </div>
           
           <div className="flex flex-col gap-4">
