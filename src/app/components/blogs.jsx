@@ -29,8 +29,8 @@ const Blogs = () => {
                                 />
                             </div>
                             <div className="p-6">
-                                <h2 className="text-xl font-semibold mb-2 text-gray-800">{blog.name}</h2>
-                                <p className="text-gray-600 text-sm ">{blog.overview}</p>
+                                <h2 className="text-xl font-semibold mb-2 text-gray-200">{blog.name}</h2>
+                                <p className="text-gray-400 text-sm ">{blog.overview}</p>
                                 <a 
                                     href={blog.url} 
                                     target="_blank" 
